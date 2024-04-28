@@ -1,0 +1,12 @@
+docker ps 
+You will get permission denied error as a regular user 
+doesn't have permissions to execute docker commands. 
+Add  the regular user to the docker group.
+
+sudo usermod -aG docker $USER 
+     or 
+sudo usermod -aG docker ubuntu
+sudo su - ubuntu  
+
+-# Exit From Current SSH Terminal & SSH(Login) again . Then execute 
+docker ps 
